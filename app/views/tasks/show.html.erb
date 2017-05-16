@@ -1,0 +1,34 @@
+<div id="tasks" class="text-center">
+  <div id="tasks_header">
+    <h1>Selected Task</h1>
+    <%= link_to "Add new entry", new_task_path %>
+  </div>
+  <br>
+  <div class="container">
+    <div id="task_header">
+      <div class="row">
+        <div class="col xs-12">
+          <div class="row">
+            <div class="col-xs-2">Task Creation</div>
+            <div class="col-xs-3">Task Name</div>
+            <div class="col-xs-3">Task Description</div>
+            <div class="col-xs-2">Task Status</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="task">
+      <div class="row">
+        <div class="col xs-12">
+          <div class="row">
+            <div class="col-xs-2"><%= @task.created_at%></div>
+            <div class="col-xs-3"><%= @task.name %></div>
+            <div class="col-xs-3"><%= @task.description %></div>
+            <div class="col-xs-2"><%= @task.done %></div>
+            <div class="col-xs-2"><%= link_to "Back to Tasks List", tasks_path %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
